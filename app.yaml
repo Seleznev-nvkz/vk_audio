@@ -1,0 +1,15 @@
+application: vk-audio
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /playlists
+  static_dir: playlists
+
+- url: .*
+  script: app.bottle

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>VK audio playlist</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="/static/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/bootstrap-theme.min.css" />
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4" style="top: 30px; left: 50px">
+            <h3>To create VK playlist:</h3>
+            <ul>
+                <li>Type ID or nickname of VK-profile</li>
+                <li>Select where to get source of music</li>
+                <li>Click the button with required type of playlist</li>
+                <li>Wait 5-10 seconds and get what you want</li>
+            </ul>
+        </div>
+
+        <div class="col-md-4" style="top: 50px; text-align: center;">
+
+        <label for="nick">ID or nickname</label>
+        <input type="text" id="nick" placeholder="ID" class="form-control" value="">
+
+        <div style="width: 50%; margin: 0 auto; text-align: center" >
+            <label>
+                <input type="radio" name="method" value="audio" checked>
+                My music
+            </label>
+            <label>
+                <input type="radio" name="method" value="wall">
+                My wall
+            </label>
+        </div>
+
+        <div style="width: 50%; margin: 0 auto; text-align: center" >
+            <input class="btn btn-primary btn-sm" type="button" value="M3U" onclick="create_playlist('m3u')">
+            <input class="btn btn-success btn-sm" type="button" value="PLS" onclick="create_playlist('pls')">
+        </div>
+
+        </div>
+    </div>
+
+    <a id="m3u" class="hidden" style="display: none;"></a>
+    <a id="pls" target="_blank" class="hidden" style="display: none;"></a>
+</body>
+<script src="/static/bootstrap-notify.min.js"></script>
+<script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+<script src="/static/main.js"></script>
+</html>
