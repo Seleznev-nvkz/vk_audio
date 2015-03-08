@@ -5,7 +5,7 @@ Simple website to create .m3u/.pls playlists with music from Vk.com ('my music' 
 
 # To Deploy
 
-1. Install the Install the [App Engine Python SDK](https://developers.google.com/appengine/downloads). See the README file for directions. You'll need python 2.7 and [pip 1.4 or later](http://www.pip-installer.org/en/latest/installing.html) installed too.
+1. Install the [App Engine Python SDK](https://developers.google.com/appengine/downloads). See the README file for directions. You'll need python 2.7 and [pip 1.4 or later](http://www.pip-installer.org/en/latest/installing.html) installed too.
 
 2. Clone this repository with
 ```sh
@@ -13,7 +13,6 @@ Simple website to create .m3u/.pls playlists with music from Vk.com ('my music' 
 ```
 3. Install dependencies in the project's `lib/` directory. Note: App Engine can only import libraries from inside your project directory.
 ```
-    cd appengine-python-bottle-skeleton
     pip install -r requirements.txt -t lib/
 ```
 
